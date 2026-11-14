@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@500;600&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: #d96749;
+    color: white;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    color: #c45b42;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    margin-top: 1.25rem;
+    font-size: clamp(2.15rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+  }
+
+  .prose-sheyu h2 {
+    margin-top: 3.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .prose-sheyu p {
+    margin-top: 1.25rem;
+    color: #62736a;
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .prose-sheyu blockquote {
+    margin: 2rem 0;
+    border-left: 3px solid #d96749;
+    background: #f0e8de;
+    padding: 1.5rem 1.75rem;
+    color: #40584e;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .prose-sheyu .note {
+    margin-top: 3rem;
+    border-top: 1px solid #dfe4de;
+    padding-top: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+.figma-custom-code-fragment {
+  display: contents;
+}
+
+.figma-bypass-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 2147483647;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+  padding: 8px 12px;
+  font:
+    600 14px/1.2 system-ui,
+    sans-serif;
+  text-decoration: none;
+}
+
+.figma-bypass-link:focus {
+  transform: translateY(0);
+}
